@@ -1,17 +1,23 @@
-on: push
-name: deploy
-jobs:
-  style-check:
-    runs-on: ubuntu-latest
+name: Push
+on:
+  push:
+    branches:
+      - main
 
+jobs:
+  run_python_script:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout del código
         uses: actions/checkout@v2
 
-      - name: Instalar herramientas de estilo
-        run: pip install flake8 black
+      - name: Configurar Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11.2'
 
-      - name: Verificar estilo de código
-        run: |
-          flake8 --exclude=.venv
-          black --check .
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar pruebas unitarias
+        run: pytest tests/
