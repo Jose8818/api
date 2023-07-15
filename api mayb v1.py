@@ -33,9 +33,7 @@ def mostrar_clima(latitud, longitud):
         print("No se pudo obtener el clima para la ubicación actual.")
 
 
-# Obtener la ubicación actual
 g = geocoder.ip('me')
 latitud, longitud = g.latlng
 
-# Mostrar el clima de la ubicación actual
 mostrar_clima(latitud, longitud)

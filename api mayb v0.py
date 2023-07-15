@@ -32,6 +32,5 @@ def mostrar_clima(ciudad):
         print("No se pudo obtener el clima para la ubicación especificada.")
 
 
-# Ejemplo de uso:
 ciudad = input("Ingresa tu ubicación (ciudad): ")
 mostrar_clima(ciudad)

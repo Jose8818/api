@@ -30,7 +30,6 @@ def mostrar_clima(latitud, longitud, idioma_destino):
     if clima is not None:
         temperatura, descripcion = clima
 
-        # Traducir la descripción del clima
         descripcion_traducida = traducir_texto(descripcion, idioma_destino)
 
         print(f"El clima en tu ubicación actual es: {descripcion_traducida}")
@@ -44,12 +43,9 @@ def mostrar_clima(latitud, longitud, idioma_destino):
         print("No se pudo obtener el clima para la ubicación actual.")
 
 
-# Obtener la ubicación actual
 g = geocoder.ip('me')
 latitud, longitud = g.latlng
 
-# Configurar el idioma de destino para la traducción
-idioma_destino = "es"  # Cambia esto a tu idioma preferido
+idioma_destino = "es"
 
-# Mostrar el clima de la ubicación actual en el idioma traducido
 mostrar_clima(latitud, longitud, idioma_destino)

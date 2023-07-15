@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>App del Clima</title>
+    <style>
+        body {
+            background-color: #B7D7E8;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #FFFFFF;
+            margin-top: 150px;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        label {
+            color: #FFFFFF;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"] {
+            width: 200px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #FFFFFF;
+            border: none;
+            color: #000000;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>App del Clima</h1>
+    <form method="POST" action="/">
+        <label for="ciudad">Ingrese su ubicación (ciudad):</label>
+        <input type="text" name="ciudad" id="ciudad" required>
+        <input type="submit" value="Obtener Clima">
+    </form>
+</body>
+</html>
