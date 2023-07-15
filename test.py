@@ -11,6 +11,6 @@ def test():
     if resultado is None:
         print("Error: El resultado es nulo")
     else:
-        print("El resultado es:", resultado)
+        print("La temperatura en Apodaca es:", resultado)
 
 test()
