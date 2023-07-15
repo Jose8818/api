@@ -1,17 +1,17 @@
 on: push
 name: deploy
 jobs:
-  deploy:
-    name: deploy to cluster
+  style-check:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout del código
         uses: actions/checkout@v2
 
-      - name: Configurar Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.11.2'
+      - name: Instalar herramientas de estilo
+        run: pip install flake8 black
 
-      - name: Ejecutar pruebas unitarias
-        run: pytest tests/
+      - name: Verificar estilo de código
+        run: |
+          flake8 --exclude=.venv
+          black --check .
