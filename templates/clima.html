@@ -5,18 +5,28 @@
     <style>
         body {
             background-color: #B7D7E8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
         
         h1 {
-            text-align: center;
             color: #FFFFFF;
-            margin-top: 150px;
+            font-size: 32px;
         }
         
         p {
-            text-align: center;
             color: #FFFFFF;
             font-size: 18px;
+        }
+
+        .rectangulo {
+            width: 100px;
+            height: 50px;
+            background-color: #FFFFFF;
+            position: absolute;
         }
     </style>
 </head>
@@ -24,5 +34,7 @@
     <h1>Clima en {{ ciudad }}</h1>
     <p>Temperatura: {{ temperatura }}°C</p>
     <p>Descripción: {{ descripcion }}</p>
+    <p>Humedad: {{ humedad }}%</p>
+
 </body>
 </html>
