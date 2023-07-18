@@ -18,6 +18,7 @@ def obtener_clima(latitud, longitud):
             "temperatura": datos_clima["main"]["temp"],
             "descripcion": datos_clima["weather"][0]["description"],
             "humedad": datos_clima["main"]["humidity"],
+            "presion": datos_clima["main"]["pressure"],
         }
         return clima
     else:
